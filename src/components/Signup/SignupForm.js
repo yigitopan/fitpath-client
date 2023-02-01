@@ -129,7 +129,7 @@ const SignupForm = () => {
               redirect: 'follow'
             };
   
-          const response = await fetch("hhttps://fitpath-server.herokuapp.com/api/users/signup", requestOptions)
+          const response = await fetch("https://fitpath-server.herokuapp.com/api/users/signup", requestOptions)
           const responseData = await response.json();
             
             if (response.status !== 201){
