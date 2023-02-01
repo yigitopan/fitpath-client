@@ -1,0 +1,21 @@
+.SignupPage {
+    display: flex;
+    height: 90vh;
+    }
+    
+    .SignupLeft {
+        background: url('../assets/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        flex: 3;
+        height: auto;
+        background-color: white;
+        z-index: 10;
+    }
+    
+    @media  screen and (max-width: 1060px) {
+        .SignupLeft {
+            display: none;
+        }
+    }

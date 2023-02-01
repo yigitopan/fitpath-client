@@ -1,0 +1,159 @@
+.WorkoutCard {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(256,256,256,0.5);
+    border-radius: 25px;
+    width: 90%;
+    max-width: 680px;
+    color: rgb(0, 0, 0);
+    padding: 15px 0px 0 0px;
+    -webkit-box-shadow: 0 1px 12px 1px rgb(0 0 0 / 40%);
+    -moz-box-shadow: 0 1px 12px 1px rgb(0 0 0 / 40%);
+    box-shadow: 0 1px 12px 1px rgb(0 0 0 / 40%);
+    margin-bottom: 25px;
+    transition: all 0.5s;
+}
+/*
+.WorkoutCard:nth-child(even) {
+    animation: comeFromRight 0.4s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+.WorkoutCard:nth-child(odd) {
+    animation: comeFromLeft 0.4s;
+    animation-timing-function:linear;
+    animation-iteration-count: 1;
+}
+*/
+@keyframes comeFromRight {
+    0%   { transform:translateX(-500px); opacity:0.0; }
+    50%   { transform:translateX(-250px); opacity:0.3; }
+    100%   { transform:translateX(0px); opacity:1.0; }
+}
+
+@-webkit-keyframes comeFromRight {
+    0%   { transform:translateX(-500px); opacity:0.0; }
+    50%   { transform:translateX(-250px); opacity:0.3; }
+    100%   { transform:translateX(0px); opacity:1.0; }
+}
+
+@keyframes comeFromLeft {
+    0%   { transform:translateX(500px); opacity:0.0; }
+    50%   { transform:translateX(250px); opacity:0.5; }
+    100%   { transform:translateX(0px); opacity:1.0; }
+}
+
+@-webkit-keyframes comeFromLeft {
+    0%   { transform:translateX(500px); opacity:0.0; }
+    50%   { transform:translateX(250px); opacity:0.5; }
+    100%   { transform:translateX(0px); opacity:1.0; }
+}
+
+.button {
+    padding: 12px 0px;
+    width: 30%;
+    align-self: center;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    border-radius: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Archivo', sans-serif;
+    margin-bottom: 10px;
+    font-size: 14px;
+    
+    &:hover {
+        background: rgba(256,256,256,0.7);
+        color: black;
+        font-weight: 700;
+    }
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+    .WorkoutCard {
+        flex: 0 0 45%;
+    }
+  }
+
+
+  @media only screen and (max-width: 1200px) {
+    .WorkoutCard {
+        font-size: 12px;
+    }
+    .DeleteX {
+        padding: 10px!important;
+    }
+  }
+
+
+.Duration {
+    text-align: center;
+    margin-bottom: 35px;
+}
+.Exercise, .Rep, .Weight {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.WorkoutCard table{
+   width: 100%;
+   box-shadow: -1px -20px 20px 0px rgba(198, 206, 48, 0.67);
+}
+
+.WorkoutCard tr .SetPart {
+    text-align: left;
+}
+
+.WorkoutCard thead {
+    background-color: black;
+    color: white;
+}
+
+
+.setCount {
+    font-size: 16px;
+    padding: 5px;
+    font-weight: 700;
+}
+
+.WorkoutCard td:not(.Deletex), .WorkoutCard th:not(.Delete) {
+    padding: 12px;
+}
+
+.Delete, .DeleteX {
+    text-align: center;
+}
+
+.DeleteX {
+    cursor: pointer;
+    font-weight: 700;
+    color: red;
+    padding: 5px;
+    font-size: 13px;
+    z-index: 999;
+}
+
+.WorkoutCard td{
+    border: 1px solid black;
+}
+
+.WorkoutCard tbody tr:nth-child(odd) td {background-color: #e2e07c;}
+
+.WorkoutCard tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 25px;
+}
+.WorkoutCard tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 25px;
+}
+
+.Date {
+    text-align: center;
+}
+
+.Rep, .Weight {
+    text-align: center;
+    font-weight: 600;
+}

@@ -1,0 +1,95 @@
+.fitnessWrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background: url("https://res.cloudinary.com/mcfit/image/upload/q_auto:best,f_auto,dpr_2/v1653990774/McFIT%20Kampagnen/2022_ForeverActive/DE_AT/McFIT_DE_SK2022_Web_Landingpage_PH1_1920x10804");
+    background-size:cover;
+  }
+
+  .addButtonContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .backButton {
+    padding: 12px 0px;
+    width: 30%;
+    align-self: center;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    border-radius: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Archivo', sans-serif;
+    margin-bottom: 10px;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.backButton:hover {
+    background: rgba(256,256,256,0.7);
+    color: black;
+    font-weight: 700;
+    color: black;
+}
+
+
+
+  @media only screen and (min-width: 1200px) {
+    .fitnessWrapper {
+        flex-direction: row!important;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .addButtonContainer {
+        flex: 0 0 80%!important;
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .addWorkoutButton {
+    width: 90%;
+    max-width: 680px;
+    min-width: 200px;
+    }
+}
+
+
+.addWorkoutButton {
+    padding: 12px 0px;
+    width: 30%;
+    align-self: center;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    border-radius: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Archivo', sans-serif;
+    margin-bottom: 10px;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.addWorkoutButton:hover {
+    background: rgba(256,256,256,0.7);
+    color: black;
+    font-weight: 700;
+    color: black;
+}
+
+.addSetForm label {
+    display: block;
+}
+
+.addSetForm input, .Select {
+    display: block;
+    width: 300px;
+    margin-bottom: 7px;
+}
+
+.addSetForm input {
+    padding: 10px;
+}
