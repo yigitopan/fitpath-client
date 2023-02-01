@@ -132,7 +132,7 @@ const LoginForm = () => {
             redirect: 'follow'
           };
 
-        const response = await fetch("http://localhost:5000/api/users/login", requestOptions)
+        const response = await fetch("https://fitpath-server.herokuapp.com/api/users/login", requestOptions)
         const responseData = await response.json();
 
           if (response.status !== 200){

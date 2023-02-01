@@ -24,7 +24,7 @@ export const testAuth = (login) => {
               redirect: 'follow'
             };
 
-        const response = await fetch("http://localhost:5000/api/users/isAuth", requestOptions)
+        const response = await fetch("https://fitpath-server.herokuapp.com/api/users/isAuth", requestOptions)
         const responseData = await response.json();
         
         console.log(responseData)
@@ -57,7 +57,7 @@ export const getWorkouts = (userId) => {
       headers: myHeaders,
       redirect: 'follow'
     };
-      const response = await fetch(`http://localhost:5000/api/workouts/${userId}/`, requestOptions)
+      const response = await fetch(`https://fitpath-server.herokuapp.com/api/workouts/${userId}/`, requestOptions)
       const responseData = await response.json();
       
       dispatch(workoutActions.reset())
@@ -100,7 +100,7 @@ export const addWorkout = (userId, workout) => {
         dispatch(workoutActions.renderer({renderer:Math.random()}))
       });
       */
-      await fetch("http://localhost:5000/api/workouts/ekle", requestOptions).then(()=>{
+      await fetch("https://fitpath-server.herokuapp.com/api/workouts/ekle", requestOptions).then(()=>{
         dispatch(workoutActions.renderer({renderer:Math.random()}))
       });
     } 
@@ -131,7 +131,7 @@ export const replaceWorkout = (userId, workoutId, workout) => {
         redirect: 'follow'
       };
     
-      await fetch("http://localhost:5000/api/workouts/duzenle", requestOptions)
+      await fetch("https://fitpath-server.herokuapp.com/api/workouts/duzenle", requestOptions)
       //const response = await fetch("http://localhost:5000/api/workouts/duzenle", requestOptions)
       //const responseData = await response.json();
     } 
@@ -161,7 +161,7 @@ export const replaceWorkout = (userId, workoutId, workout) => {
         redirect: 'follow'
       };
       
-      await fetch("http://localhost:5000/api/workouts/sil", requestOptions)
+      await fetch("https://fitpath-server.herokuapp.com/api/workouts/sil", requestOptions)
       //const response = await fetch("http://localhost:5000/api/workouts/sil", requestOptions)
       //const responseData = await response.json();
      
