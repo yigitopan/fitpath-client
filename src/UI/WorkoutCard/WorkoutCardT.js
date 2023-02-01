@@ -63,15 +63,15 @@ const WorkoutCardT = (props) => {
             {props.isList && <button onClick={editHandler} className={classes.button}>Duzenle</button>}
             
             <h3 className={classes.Date}>{props.workout.date}</h3>
-            <p className={classes.Duration}>{props.workout.duration} Dakika</p>
+            <p className={classes.Duration}>{props.workout.duration} Minutes</p>
 
             {props.isList &&
                         <table className={classes.Table}>
                         <thead>
                             <tr>
-                            <th className={classes.SetPart} scope="col">Set - Hareket</th>
-                            <th scope="col">Kilo</th>
-                            <th scope="col">Rep</th>
+                            <th className={classes.SetPart} scope="col">Set - Exercise</th>
+                            <th scope="col">Weight</th>
+                            <th scope="col">Reps</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -94,9 +94,9 @@ const WorkoutCardT = (props) => {
                             <thead>
                                 <tr>
                                     <th className={classes.Delete} scope="col">Sil</th>
-                                    <th scope="col" className={classes.SetPart}>Set - Hareket</th>
-                                    <th scope="col">Kilo</th>
-                                    <th scope="col">Rep</th>
+                                    <th scope="col" className={classes.SetPart}>Set - Exercise</th>
+                                    <th scope="col">Weight</th>
+                                    <th scope="col">Reps</th>
                                  </tr>
                             </thead>
             

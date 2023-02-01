@@ -137,27 +137,27 @@ const SignupForm = () => {
                 throw new Error(responseData.message);
             }
           navigateToHomePage();
-          alert("Başarıyla üye oldunuz.");
+          alert("Signed up succesfully.");
           }
   
         catch(err){
           console.log("signup false")
-          alert("Eksik veya yanlış veri");
+          alert("Wrong/missing input.");
         }
       };
     return (
         <div  className={classes.signupFormWrapper}>
-            <h2 className={classes.h2}>Üye Ol</h2>
+            <h2 className={classes.h2}>Sign Up</h2>
             <form className={classes.form} onSubmit={signUpSubmitHandler}>
-                    {(nameTouched && !validName) && <p className={classes.error}>İsim girdisi boş kalamaz</p>}
-                    <input value={name} onChange={nameChangeHandler} onBlur={nameBlurHandler} className={classes.input} placeholder='İsminiz' type="text"></input>
-                    {(surnameTouched && !validSurname) && <p className={classes.error}>Soyad girdisi boş kalamaz</p>}
-                    <input value={surname} onChange={surnameChangeHandler} onBlur={surnameBlurHandler} className={classes.input}  placeholder='Soyadınız' type="text"></input>
-                    {(emailTouched && !validEmail) && <p className={classes.error}>Geçersiz E-mail</p>}
-                    <input value={mail} onChange={emailChangeHandler} onBlur={emailBlurHandler} className={classes.input}  placeholder='Emailiniz' type="email"></input>
-                    {(passTouched && !validPass) && <p className={classes.error}>Şifre en az 6 karakterden oluşmalı</p>}
-                    <input value={pass} onChange={passChangeHandler} onBlur={passBlurHandler} className={classes.input}  placeholder='Şifreniz' type="password"></input>
-                    <button className={`${classes.button} ${allValid ? classes.valid : classes.notvalid}`} type="submit">ÜYE OL</button>
+                    {(nameTouched && !validName) && <p className={classes.error}>First Name can't be empty.</p>}
+                    <input value={name} onChange={nameChangeHandler} onBlur={nameBlurHandler} className={classes.input} placeholder='First Name' type="text"></input>
+                    {(surnameTouched && !validSurname) && <p className={classes.error}>Last Name can't be empty.</p>}
+                    <input value={surname} onChange={surnameChangeHandler} onBlur={surnameBlurHandler} className={classes.input}  placeholder='Last Name' type="text"></input>
+                    {(emailTouched && !validEmail) && <p className={classes.error}>Invalid E-Mail</p>}
+                    <input value={mail} onChange={emailChangeHandler} onBlur={emailBlurHandler} className={classes.input}  placeholder='Your E-Mail' type="email"></input>
+                    {(passTouched && !validPass) && <p className={classes.error}>Password is shorter than 6 characters</p>}
+                    <input value={pass} onChange={passChangeHandler} onBlur={passBlurHandler} className={classes.input}  placeholder='Password' type="password"></input>
+                    <button className={`${classes.button} ${allValid ? classes.valid : classes.notvalid}`} type="submit">SIGN UP</button>
             </form> 
         </div>
     )

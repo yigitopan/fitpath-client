@@ -154,16 +154,16 @@ const LoginForm = () => {
       
     return (
         <div  className={classes.loginFormWrapper}>
-            <h2 className={classes.h2}>Giriş Yap</h2>
+            <h2 className={classes.h2}>Log In</h2>
             {invalidAttempt && <h4 className={classes.invalidLogin}>{loginErrorMessage}</h4>}
             <form  className={classes.form} onSubmit={loginSubmitHandler}>
-                    {(emailTouched && !validEmail) && <p className={classes.error}>Geçersiz E-mail</p>}
-                    <input value={mail} className={classes.input} onChange={emailHandler} onBlur={mailBlurHandler} placeholder="Emailiniz" type="text" id="loginEmail" name="loginEmail"></input>
-                    {(passTouched && !validPass) && <p className={classes.error}>Şifre 6 karaktarden daha kısa</p>}
-                    <input value={pass} className={classes.input} onChange={passHandler} onBlur={passBlurHandler} placeholder="Şifreniz" type="password" id="loginPass" name="loginPass"></input>
-                    <button className={`${classes.button} ${allValid ? classes.valid : classes.notvalid}`} type="submit">GİRİŞ YAP</button>
+                    {(emailTouched && !validEmail) && <p className={classes.error}>Invalid E-mail</p>}
+                    <input value={mail} className={classes.input} onChange={emailHandler} onBlur={mailBlurHandler} placeholder="Your E-Mail" type="text" id="loginEmail" name="loginEmail"></input>
+                    {(passTouched && !validPass) && <p className={classes.error}>Password is shorter than 6 characters</p>}
+                    <input value={pass} className={classes.input} onChange={passHandler} onBlur={passBlurHandler} placeholder="Password" type="password" id="loginPass" name="loginPass"></input>
+                    <button className={`${classes.button} ${allValid ? classes.valid : classes.notvalid}`} type="submit">LOG IN</button>
             </form> 
-            <p className={classes.signup}>Hala hesabınız yok mu? <span className={classes.span} onClick={navigateToSignupPage}>Üye olun</span></p>
+            <p className={classes.signup}>Still no account? <span className={classes.span} onClick={navigateToSignupPage}>Sign Up</span></p>
         </div>
     )
 }

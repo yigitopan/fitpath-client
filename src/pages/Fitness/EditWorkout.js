@@ -61,7 +61,7 @@ const AddWorkout = (props) => {
             const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
             dispatch(workoutActions.overwrite({
                 id: props.idToEdit,
-                tarih:tarih.toLocaleDateString("tr-TR", options),
+                tarih:tarih.toLocaleDateString("en-UK", options),
                 sure:sure.current.value
             }))
             setReadyToReplace(true)
@@ -96,10 +96,10 @@ const AddWorkout = (props) => {
             <form className={classes.addSetForm}>
                 <Select ref={hareket} className={classes.Select} options={options} />
                 <div className={classes.inputContainer}>
-                    <input ref={agirlik} placeholder="Agirlik" type="number"></input>     
-                    <input ref={tekrar} placeholder="Tekrar" type="number"></input>
+                    <input ref={agirlik} placeholder="Weight" type="number"></input>     
+                    <input ref={tekrar} placeholder="Reps" type="number"></input>
                 </div>
-                <button onClick={addSetHandler} className={classes.addSetButton}>Set ekle</button>
+                <button onClick={addSetHandler} className={classes.addSetButton}>Insert Set</button>
             </form>
 
             <WorkoutCard isList={false} workout={workoutToEdit}></WorkoutCard>
@@ -107,10 +107,10 @@ const AddWorkout = (props) => {
             <form className={classes.addWorkoutForm}>
             <div className={classes.inputContainer}>
                 <DatePicker dateFormat="dd/MM/yyyy" selected={tarih} onChange={date => setStartDate(date)}/> 
-                <input ref={sure} placeholder="Sure" type="number" defaultValue={workoutToEdit.duration}></input>
+                <input ref={sure} placeholder="Duration" type="number" defaultValue={workoutToEdit.duration}></input>
             </div>
-            <button onClick={saveWorkoutHandler} className={classes.addSetButton}>Kaydet</button>
-            <button onClick={deleteWorkoutHandler} className={classes.addSetButton}>Sil</button>
+            <button onClick={saveWorkoutHandler} className={classes.addSetButton}>Save</button>
+            <button onClick={deleteWorkoutHandler} className={classes.addSetButton}>Delete</button>
             </form>
         </div>
     )

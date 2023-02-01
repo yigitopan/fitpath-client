@@ -51,7 +51,7 @@ const Fitness = () => {
                {!adding && !editing &&
                 <React.Fragment>
                     <div className={classes.addButtonContainer}>
-                        <button onClick={addWorkoutHandler} className={classes.addWorkoutButton}>Antrenman Ekle</button>
+                        <button onClick={addWorkoutHandler} className={classes.addWorkoutButton}>Add Workout</button>
                     </div>
                     
                     {workouts.slice(0).reverse().map((workout,i) => {
@@ -61,14 +61,14 @@ const Fitness = () => {
                }
                 {adding &&
                 <React.Fragment>
-                    <button onClick={()=>{setAdding(false)}} className={classes.backButton}>Geri</button>
+                    <button onClick={()=>{setAdding(false)}} className={classes.backButton}>Back</button>
                     <AddWorkout clickAddHandler={exitAdding}></AddWorkout>
                 </React.Fragment>
                 }
 
                 {editing &&
                 <React.Fragment>
-                    <button onClick={()=>{setEditing(false)}} className={classes.backButton}>Geri</button>
+                    <button onClick={()=>{setEditing(false)}} className={classes.backButton}>Back</button>
                     <EditWorkout clickAddHandler={exitEditing} idToEdit={editID}></EditWorkout>
                 </React.Fragment>
                 }

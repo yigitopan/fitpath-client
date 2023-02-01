@@ -1,5 +1,5 @@
 import classes from './MainHeader.module.css'
-import headerLogo from '../assets/logo.webp'
+import headerLogo from '../assets/logo.png'
 import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { useLocation } from 'react-router-dom';
@@ -56,31 +56,31 @@ const MainHeader = () => {
     return (
         <div  className={wrapperClass}>
         <header className={headerClass}>
-            {!isLoggedIn &&<div onClick={LoginButtonClickHandler} className={classes.mobileHeaderButton}><button><p>Giriş Yap</p></button></div>}
-            {isLoggedIn &&<div className={classes.mobileHeaderButton}><button><p>Hesabım</p></button></div>}
+            {!isLoggedIn &&<div onClick={LoginButtonClickHandler} className={classes.mobileHeaderButton}><button><p>Log In</p></button></div>}
+            {isLoggedIn &&<div className={classes.mobileHeaderButton}><button  onClick={navigateToFit}><p>Tracker</p></button></div>}
             <div onClick={navigateToHomePage} className={classes.headerLogo}><img src={headerLogo}></img></div>
-            {!isLoggedIn &&<div onClick={SignupButtonClickHandler} className={classes.mobileHeaderButton}><button><p>Üye Ol</p></button></div>}
-            {isLoggedIn &&<div className={classes.mobileHeaderButton}><button onClick={LogoutHandler} ><p>Çıkış Yap</p></button></div>}
+            {!isLoggedIn &&<div onClick={SignupButtonClickHandler} className={classes.mobileHeaderButton}><button><p>Sign Up</p></button></div>}
+            {isLoggedIn &&<div className={classes.mobileHeaderButton}><button onClick={LogoutHandler} ><p>Log Out</p></button></div>}
 
 
 
             <ul className={classes.headerList}>
-                <li onClick={navigateToAb} className={homePageLi}>TestApp nedir?</li>
-                <li onClick={navigateToFit} className={homePageLi}>Antrenman Takibi</li>
-                <li onClick={navigateToCal} className={homePageLi}>Kalori Takibi</li>
+                <li onClick={navigateToAb} className={homePageLi}>About</li>
+                <li onClick={navigateToFit} className={homePageLi}>Exercise</li>
+                <li onClick={navigateToCal} className={homePageLi}>Nutrition</li>
             </ul>  
             <div className={classes.headerButtonWrapper}>
                 {!isLoggedIn &&
                     <div>
-                    <button onClick={LoginButtonClickHandler}><p>Giriş Yap</p></button>
-                    <button onClick={SignupButtonClickHandler}><p>Üye Ol</p></button>
+                    <button onClick={LoginButtonClickHandler}><p>Log In</p></button>
+                    <button onClick={SignupButtonClickHandler}><p>Sign Up</p></button>
                     </div>
                 }
 
                 {isLoggedIn &&
                     <div>
-                        <button onClick={MyAcc}><p>Hesabım</p></button>
-                        <button onClick={LogoutHandler} ><p>Çıkış Yap</p></button>
+                        <button onClick={MyAcc}><p>Account</p></button>
+                        <button onClick={LogoutHandler} ><p>Log Out</p></button>
                     </div>
                 }
 
