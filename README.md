@@ -1,7 +1,7 @@
 ## Fitpath
 
 <div align="center">
-<img src="./src/assets/logo.png" width="100"  />
+<img src="./src/assets/logo.png" width="300"  />
 </div>
 
 ### Now online at [fitpath.herokuapp.com](https://www.fitpath.herokuapp.com)!
