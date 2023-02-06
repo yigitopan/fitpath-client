@@ -1,4 +1,7 @@
+<div align="center">
 ## Fitpath
+</div>
+
 ### Now online at [fitpath.herokuapp.com](https://www.fitpath.herokuapp.com)!
 Basic Fitness Tracking App with React & DND-Kit. This repository serves to the back-end of the project. For server side, [click here](https://github.com/yigitopan/fitpath-server)
 
