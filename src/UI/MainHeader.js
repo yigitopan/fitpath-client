@@ -67,7 +67,6 @@ const MainHeader = () => {
             <ul className={classes.headerList}>
                 <li onClick={navigateToAb} className={homePageLi}>About</li>
                 <li onClick={navigateToFit} className={homePageLi}>Exercise</li>
-                <li onClick={navigateToCal} className={homePageLi}>Nutrition</li>
             </ul>  
             <div className={classes.headerButtonWrapper}>
                 {!isLoggedIn &&

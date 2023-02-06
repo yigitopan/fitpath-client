@@ -71,6 +71,7 @@ width: 100%;
 .headerLogo img{
     object-fit: cover;
     max-height: 50px;
+    filter: contrast(2);
 }
 
 .headerButtonWrapper button {

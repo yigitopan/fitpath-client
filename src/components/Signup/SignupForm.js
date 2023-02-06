@@ -149,9 +149,9 @@ const SignupForm = () => {
         <div  className={classes.signupFormWrapper}>
             <h2 className={classes.h2}>Sign Up</h2>
             <form className={classes.form} onSubmit={signUpSubmitHandler}>
-                    {(nameTouched && !validName) && <p className={classes.error}>First Name can't be empty.</p>}
+                    {(nameTouched && !validName) && <p className={classes.error}>First name can't be empty.</p>}
                     <input value={name} onChange={nameChangeHandler} onBlur={nameBlurHandler} className={classes.input} placeholder='First Name' type="text"></input>
-                    {(surnameTouched && !validSurname) && <p className={classes.error}>Last Name can't be empty.</p>}
+                    {(surnameTouched && !validSurname) && <p className={classes.error}>Last name can't be empty.</p>}
                     <input value={surname} onChange={surnameChangeHandler} onBlur={surnameBlurHandler} className={classes.input}  placeholder='Last Name' type="text"></input>
                     {(emailTouched && !validEmail) && <p className={classes.error}>Invalid E-Mail</p>}
                     <input value={mail} onChange={emailChangeHandler} onBlur={emailBlurHandler} className={classes.input}  placeholder='Your E-Mail' type="email"></input>

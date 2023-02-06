@@ -1,0 +1,42 @@
+.aboutContainer {
+    background-color: black;
+    height: 100vh;
+}
+
+.logoWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutTextWrapper {
+    color: white;
+    padding-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.otherText {
+    padding-top: 35px;
+    text-align: center;
+    color: white;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    width: 70px;
+    cursor:pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.logoContainer img {
+    width:inherit;
+    filter:invert(100%) contrast(2);
+}
+
+.logoContainer:hover {
+    transform: scale(1.2);
+}
+
