@@ -24,7 +24,7 @@ const LoginForm = () => {
   let navigate = useNavigate();
   
   const navigateToSignupPage = () => {
-      navigate('/kayit');
+      navigate('/signup');
   }
   const navigateToHomePage = () => {
     navigate('/');
