@@ -35,12 +35,12 @@ function App() {
       <MainHeader />
       <Routes>
       <Route path="/" element={<HomePage/>} />
-      <Route path="nedir" element={<About/>}/>
+      <Route path="about" element={<About/>}/>
 
-      <Route path="giris" element={<LoginPage/>} />
-      <Route path="kayit" element={<SignupPage/>} />
+      <Route path="login" element={<LoginPage/>} />
+      <Route path="signup" element={<SignupPage/>} />
 
-      <Route path="hesabim" element={giris}/>
+      <Route path="account" element={giris}/>
       <Route path="kalori" element={kalori}/>
       <Route path="fitness" element={fitness}/>
       </Routes>

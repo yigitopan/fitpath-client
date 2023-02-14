@@ -20,17 +20,13 @@ const MainHeader = () => {
         navigate('/');
     }
     const LoginButtonClickHandler = () => {
-        navigate('giris');
+        navigate('login');
     }
     const SignupButtonClickHandler = () => {
-        navigate('kayit');
+        navigate('signup');
     }
     const navigateToAcc = () => {
-        navigate('hesabim');
-    }
-
-    const navigateToCal = () => {
-        navigate('kalori');
+        navigate('account');
     }
 
     const navigateToFit = () => {
@@ -38,7 +34,7 @@ const MainHeader = () => {
     }
 
     const navigateToAb = () => {
-        navigate('nedir');
+        navigate('about');
     }
 
     const LogoutHandler = () => {
